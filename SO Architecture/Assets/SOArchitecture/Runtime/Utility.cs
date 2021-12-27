@@ -2,6 +2,6 @@
 {
     internal static class Utility
     {
-        public const string CHANNEL_CREATION_MENU = "TMG/Channels/";
+        public const string CHANNEL_CREATION_MENU = "Channels/";
     }
 }
