@@ -1,3 +1,5 @@
-# unity-so-architecture-package
-
-https://github.com/danielrusnac/unity-so-architecture-package.git?path=SOArchitecture
+# Sriptable Object Architecture
+### Pachage Manager Link
+```
+https://github.com/danielrusnac/unity-so-architecture-package.git?path=/SO Architecture/Assets/SOArchitecture
+```
