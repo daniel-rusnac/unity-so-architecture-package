@@ -1,0 +1,18 @@
+{
+    "name": "com.trymygames.soarchitecture.editor",
+    "rootNamespace": "TryMyGames.SOArchitecture",
+    "references": [
+        "GUID:ac004da094302b9418f0f8e8693d9732"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

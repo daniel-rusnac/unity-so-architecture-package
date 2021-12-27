@@ -1,0 +1,9 @@
+{
+  "name": "com.trymygames.soarchitecture",
+  "version": "1.0.0",
+  "displayName": "Scriptable Object Architecture",
+  "author": {
+    "name": "Daniel Rusnac",
+    "email": "daniel.rusnac@trymygames.com"
+  }
+}
