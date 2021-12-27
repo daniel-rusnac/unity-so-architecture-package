@@ -1,11 +1,11 @@
-﻿using TryMyGames.SOArchitecture.Channels;
+﻿using SOArchitecture.Channels;
 using UnityEditor;
 using UnityEngine;
 
-namespace TryMyGames.SOArchitecture
+namespace SOArchitecture
 {
     [CustomEditor(typeof(BaseChannelSO), true)]
-    public class ChannelEditor : Editor
+    public class ChannelEditor : UnityEditor.Editor
     {
         private BaseChannelSO channel;
 

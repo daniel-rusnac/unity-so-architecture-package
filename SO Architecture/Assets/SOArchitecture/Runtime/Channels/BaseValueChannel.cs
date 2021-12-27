@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TryMyGames.SOArchitecture.Channels
+namespace SOArchitecture.Channels
 {
     public abstract class BaseValueChannel<T> : BaseChannelSO
     {

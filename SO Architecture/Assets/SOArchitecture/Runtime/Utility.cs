@@ -1,4 +1,4 @@
-﻿namespace TryMyGames.SOArchitecture
+﻿namespace SOArchitecture
 {
     internal static class Utility
     {

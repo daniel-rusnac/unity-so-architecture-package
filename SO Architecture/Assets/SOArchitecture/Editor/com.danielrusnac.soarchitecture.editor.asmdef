@@ -1,8 +1,12 @@
 {
-    "name": "com.trymygames.soarchitecture",
-    "rootNamespace": "TryMyGames.SOArchitecture",
-    "references": [],
-    "includePlatforms": [],
+    "name": "com.danielrusnac.soarchitecture.editor",
+    "rootNamespace": "SOArchitecture",
+    "references": [
+        "GUID:ac004da094302b9418f0f8e8693d9732"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
