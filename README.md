@@ -9,6 +9,9 @@ A simple system of
 - An icon for channel scriptable objects
 - Added a changelog
 
+### Changed
+- Raise event button is now active only in play mode
+
 ## Install to Unity
 
 Package Link for latest version, [v1.2.0](https://github.com/danielrusnac/unity-so-architecture-package/releases/tag/v1.2.0)
