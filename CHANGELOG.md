@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [1.2.0] - 2021-12-27
+## [1.2.0] - 2021-12-29
 ### Added
 - A stack trace for channel calls
 - An icon for channel scriptable objects
