@@ -20,12 +20,21 @@ namespace SOArchitecture
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
+            
+            GUI.enabled = Application.isPlaying;
 
             if (GUILayout.Button("Raise"))
             {
                 channel.Raise();
             }
+            
+            GUI.enabled = true;
 
+            if (!Application.isPlaying)
+            {
+                EditorGUILayout.HelpBox("Raise is available only during play mode!", MessageType.Info);
+            }
+            
             stackTrace.Draw();
         }
     }
