@@ -17,6 +17,7 @@ namespace SOArchitecture.Channels
 
         public void Raise(T value)
         {
+            AddStackTrace(value);
             foreach (Action<T> listener in valueListeners)
             {
                 listener.Invoke(value);

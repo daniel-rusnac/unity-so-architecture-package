@@ -2,7 +2,7 @@
 
 namespace SOArchitecture.Channels
 {
-    [CreateAssetMenu(fileName = "Int Channel", menuName = Utility.CHANNEL_CREATION_MENU + "Int Channel")]
+    [CreateAssetMenu(fileName = "Int Channel", menuName = SOArchitectureUtility.CHANNEL_CREATION_MENU + "Int Channel")]
     public class IntChannelSO : BaseValueChannel<int>
     {
         

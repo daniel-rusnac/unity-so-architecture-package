@@ -4,12 +4,16 @@ using UnityEngine;
 
 namespace SOArchitecture.Channels
 {
-    public abstract class BaseChannelSO : ScriptableObject
+    public abstract class BaseChannelSO : ScriptableObject, IStackTraceObject
     {
+        private List<StackTraceEntry> stackTraces = new List<StackTraceEntry>();
         protected HashSet<Action> listeners = new HashSet<Action>();
+        
+        public List<StackTraceEntry> StackTraces => stackTraces;
 
         public virtual void Raise()
         {
+            AddStackTrace();
             foreach (Action listener in listeners)
             {
                 listener.Invoke();
@@ -24,6 +28,21 @@ namespace SOArchitecture.Channels
         public void Unregister(Action action)
         {
             listeners.Remove(action);
+        }
+        
+        public void AddStackTrace()
+        {
+#if UNITY_EDITOR
+            if (SOArchitectureUtility.IsDebugMode)
+                stackTraces.Insert(0, StackTraceEntry.Create());
+#endif
+        }
+        public void AddStackTrace(object value)
+        {
+#if UNITY_EDITOR
+            if(SOArchitectureUtility.IsDebugMode)
+                stackTraces.Insert(0, StackTraceEntry.Create(value));
+#endif
         }
     }
 }

@@ -5,13 +5,16 @@ using UnityEngine;
 namespace SOArchitecture
 {
     [CustomEditor(typeof(BaseChannelSO), true)]
-    public class ChannelEditor : UnityEditor.Editor
+    public class ChannelEditor : Editor
     {
+        private StackTrace stackTrace;
         private BaseChannelSO channel;
 
         private void OnEnable()
         {
             channel = (BaseChannelSO) target;
+            stackTrace = new StackTrace(channel);
+            stackTrace.OnRepaint.AddListener(Repaint);
         }
 
         public override void OnInspectorGUI()
@@ -22,6 +25,8 @@ namespace SOArchitecture
             {
                 channel.Raise();
             }
+
+            stackTrace.Draw();
         }
     }
 }
