@@ -6,13 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Raise event button is now active only in play mode
+
 ## [1.2.0] - 2021-12-29
 ### Added
 - A stack trace for channel calls
 - An icon for channel scriptable objects
 - Added a changelog
-### Changed
-- Raise event button is now active only in play mode
 
 [Unreleased]: https://github.com/danielrusnac/unity-so-architecture-package
 [1.2.0]: https://github.com/danielrusnac/unity-so-architecture-package/releases/tag/v1.2.0
