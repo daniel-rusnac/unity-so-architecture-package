@@ -3,6 +3,9 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+### Changed
+- Updated assemblies
+
 ## [1.2.0] - 2021-12-29
 ### Added
 - A stack trace for channel calls
