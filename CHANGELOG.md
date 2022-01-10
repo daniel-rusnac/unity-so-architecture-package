@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [1.2.1] - 2022-01-10
 
 ### Changed
 - Updated assemblies
@@ -17,6 +17,7 @@ All notable changes to this project will be documented in this file.
 
 [Unreleased]: https://github.com/danielrusnac/unity-so-architecture-package
 [1.2.0]: https://github.com/danielrusnac/unity-so-architecture-package/releases/tag/v1.2.0
+[1.2.1]: https://github.com/danielrusnac/unity-so-architecture-package/releases/tag/v1.2.1
 
 ---
 
