@@ -1,6 +1,6 @@
 {
-    "name": "com.trymygames.soarchitecture",
-    "rootNamespace": "SOArchitecture",
+    "name": "com.danielrusnac.soarchitecture",
+    "rootNamespace": "SOArchitecure",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
