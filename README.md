@@ -7,10 +7,6 @@ A simple system that makes use of *Scriptable Objects* to connect different clas
 - Go to *Window/Package Manager*
 - Click on *+ Add package from git URL...*
 - Paste link for the wanted version.
-Package Link for latest version, [v1.2.0](https://github.com/danielrusnac/unity-so-architecture-package/releases/tag/v1.2.0)
-```
-https://github.com/danielrusnac/unity-so-architecture-package.git?path=SO Architecture/Assets/SOArchitecture#v1.2.0
-```
 
 To get a specific verion of the package, go to releases and copy the "Package Link".
 
