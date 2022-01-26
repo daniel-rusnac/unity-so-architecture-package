@@ -6,21 +6,24 @@ namespace SOArchitecture.Channels
 {
     public abstract class BaseValueChannel<T> : BaseChannelSO
     {
-        [SerializeField] private T _defaultValue;
+        [Tooltip("The value that will be raised when 'Raise' button in the inspector is pressed.")]
+        [SerializeField] private T _debugValue;
+        [Tooltip("The last raised value.")]
+        [SerializeField] private T _lastValue;
 
-        public T LastValue { get; private set; } = default;
+        public T LastValue => _lastValue;
 
-        protected HashSet<Action<T>> valueListeners = new HashSet<Action<T>>();
+        protected readonly HashSet<Action<T>> ValueListeners = new HashSet<Action<T>>();
 
         public override void Raise()
         {
-            Raise(_defaultValue);
+            Raise(_debugValue);
         }
 
         public void Raise(T value)
         {
             AddStackTrace(value);
-            foreach (Action<T> listener in valueListeners)
+            foreach (Action<T> listener in ValueListeners)
             {
                 listener.Invoke(value);
             }
@@ -30,17 +33,17 @@ namespace SOArchitecture.Channels
                 listener.Invoke();
             }
 
-            LastValue = value;
+            _lastValue = value;
         }
 
         public void Register(Action<T> action)
         {
-            valueListeners.Add(action);
+            ValueListeners.Add(action);
         }
 
         public void Unregister(Action<T> action)
         {
-            valueListeners.Remove(action);
+            ValueListeners.Remove(action);
         }
     }
 }
