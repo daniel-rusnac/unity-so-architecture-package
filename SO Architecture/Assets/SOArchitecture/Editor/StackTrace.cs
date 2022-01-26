@@ -6,9 +6,11 @@ using UnityEngine.Events;
 
 namespace SOArchitecture
 {
+    // The scripts is from an asset https://assetstore.unity.com/packages/tools/utilities/scriptableobject-architecture-131520
+    // with some modifications
     public class StackTrace
     {
-        public StackTrace(IStackTraceObject target, bool startCollapsed = false)
+        public StackTrace(IStackTraceObject target, bool startCollapsed = true)
         {
             if (target == null)
             {

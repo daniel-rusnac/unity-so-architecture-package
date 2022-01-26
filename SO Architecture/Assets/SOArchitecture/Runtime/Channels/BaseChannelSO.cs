@@ -6,15 +6,15 @@ namespace SOArchitecture.Channels
 {
     public abstract class BaseChannelSO : ScriptableObject, IStackTraceObject
     {
-        private List<StackTraceEntry> stackTraces = new List<StackTraceEntry>();
-        protected HashSet<Action> listeners = new HashSet<Action>();
+        private readonly List<StackTraceEntry> _stackTraces = new List<StackTraceEntry>();
+        protected readonly HashSet<Action> Listeners = new HashSet<Action>();
         
-        public List<StackTraceEntry> StackTraces => stackTraces;
+        public List<StackTraceEntry> StackTraces => _stackTraces;
 
         public virtual void Raise()
         {
             AddStackTrace();
-            foreach (Action listener in listeners)
+            foreach (Action listener in Listeners)
             {
                 listener.Invoke();
             }
@@ -22,26 +22,26 @@ namespace SOArchitecture.Channels
 
         public void Register(Action action)
         {
-            listeners.Add(action);
+            Listeners.Add(action);
         }
 
         public void Unregister(Action action)
         {
-            listeners.Remove(action);
+            Listeners.Remove(action);
         }
         
         public void AddStackTrace()
         {
 #if UNITY_EDITOR
             if (SOArchitectureUtility.IsDebugMode)
-                stackTraces.Insert(0, StackTraceEntry.Create());
+                _stackTraces.Insert(0, StackTraceEntry.Create());
 #endif
         }
         public void AddStackTrace(object value)
         {
 #if UNITY_EDITOR
             if(SOArchitectureUtility.IsDebugMode)
-                stackTraces.Insert(0, StackTraceEntry.Create(value));
+                _stackTraces.Insert(0, StackTraceEntry.Create(value));
 #endif
         }
     }

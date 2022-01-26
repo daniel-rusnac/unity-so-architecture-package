@@ -6,13 +6,15 @@ namespace SOArchitecture.Channels
 {
     public abstract class BaseValueChannel<T> : BaseChannelSO
     {
-        [SerializeField] private T defaultValue;
+        [SerializeField] private T _defaultValue;
+
+        public T LastValue { get; private set; } = default;
 
         protected HashSet<Action<T>> valueListeners = new HashSet<Action<T>>();
 
         public override void Raise()
         {
-            Raise(defaultValue);
+            Raise(_defaultValue);
         }
 
         public void Raise(T value)
@@ -23,10 +25,12 @@ namespace SOArchitecture.Channels
                 listener.Invoke(value);
             }
 
-            foreach (Action listener in listeners)
+            foreach (Action listener in Listeners)
             {
                 listener.Invoke();
             }
+
+            LastValue = value;
         }
 
         public void Register(Action<T> action)

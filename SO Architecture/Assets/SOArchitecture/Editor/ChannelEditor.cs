@@ -7,14 +7,14 @@ namespace SOArchitecture
     [CustomEditor(typeof(BaseChannelSO), true)]
     public class ChannelEditor : Editor
     {
-        private StackTrace stackTrace;
-        private BaseChannelSO channel;
+        private StackTrace _stackTrace;
+        private BaseChannelSO _channel;
 
         private void OnEnable()
         {
-            channel = (BaseChannelSO) target;
-            stackTrace = new StackTrace(channel);
-            stackTrace.OnRepaint.AddListener(Repaint);
+            _channel = (BaseChannelSO) target;
+            _stackTrace = new StackTrace(_channel);
+            _stackTrace.OnRepaint.AddListener(Repaint);
         }
 
         public override void OnInspectorGUI()
@@ -25,7 +25,7 @@ namespace SOArchitecture
 
             if (GUILayout.Button("Raise"))
             {
-                channel.Raise();
+                _channel.Raise();
             }
             
             GUI.enabled = true;
@@ -35,7 +35,7 @@ namespace SOArchitecture
                 EditorGUILayout.HelpBox("Raise is available only during play mode!", MessageType.Info);
             }
             
-            stackTrace.Draw();
+            _stackTrace.Draw();
         }
     }
 }

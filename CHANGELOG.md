@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+[Unreleased]
+
+### Added
+- Value channels now store the last raised value
+
+### Changed
+- Stack traces are now collapsed by default
+
 ## [1.2.1] - 2022-01-10
 
 ### Changed

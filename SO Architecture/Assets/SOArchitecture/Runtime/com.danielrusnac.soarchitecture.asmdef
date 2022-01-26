@@ -1,6 +1,6 @@
 {
     "name": "com.danielrusnac.soarchitecture",
-    "rootNamespace": "SOArchitecure",
+    "rootNamespace": "SOArchitecture",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
