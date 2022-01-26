@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Stack traces are now collapsed by default
 - Moved channel icon into the editor folder
 
+### Fixed
+- Fixed a typo in the runtime namespace 
+
 ## [1.2.1] - 2022-01-10
 
 ### Changed
